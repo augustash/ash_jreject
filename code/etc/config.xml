@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Use the jQuery Browser Rejection library (jReject) to notify customers
+ * using old browsers to upgrade
+ *
+ * @category    Ash
+ * @package     Ash_Jreject
+ * @copyright   Copyright (c) 2015 August Ash, Inc. (http://www.augustash.com)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Ash_Jreject>
+             <version>1.0.0</version>
+             <ashup
+                remote="https://s3.amazonaws.com/augustash/mage/ash_jreject-latest.zip" />
+        </Ash_Jreject>
+    </modules>
+
+    <global>
+        <helpers>
+            <ash_jreject>
+                <class>Ash_Jreject_Helper</class>
+            </ash_jreject>
+        </helpers>
+        <models>
+            <ash_jreject>
+                <class>Ash_Jreject_Model</class>
+            </ash_jreject>
+        </models>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <ash_jreject>
+                    <file>ash_jreject.xml</file>
+                </ash_jreject>
+            </updates>
+        </layout>
+    </frontend>
+
+    <default>
+        <ash_jreject>
+            <general>
+                <enabled>1</enabled>
+            </general>
+            <config>
+                <close>1</close>
+                <close_esc>1</close_esc>
+                <close_cookie>0</close_cookie>
+                <overlay_bg_color><![CDATA[#000]]></overlay_bg_color>
+                <overlay_opacity><![CDATA[0.8]]></overlay_opacity>
+                <fade_in_time>300</fade_in_time>
+                <fade_out_time>300</fade_out_time>
+            </config>
+            <browsers>
+                <msie><![CDATA[msie5,msie6,msie7,msie8]]></msie>
+                <firefox><![CDATA[firefox2,firefox3,firefox4,firefox5,firefox6,firefox7,firefox8,firefox9]]></firefox>
+                <chrome><![CDATA[chrome1,chrome2,chrome3,chrome4,chrome5,chrome6,chrome7,chrome8,chrome9,chrome10,chrome11,chrome12,chrome13,chrome14,chrome15]]></chrome>
+                <safari><![CDATA[safari1,safari2,safari3,safari4]]></safari>
+                <opera><![CDATA[opera1,opera2,opera3,opera4,opera5,opera6,opera7,opera8,opera9]]></opera>
+            </browsers>
+            <browser_alternatives>
+                <display><![CDATA[msie,firefox,chrome,safari]]></display>
+            </browser_alternatives>
+            <custom>
+                <header><![CDATA[Did you know that your Internet Browser is out of date?]]></header>
+                <paragraph1><![CDATA[Your browser is out of date, and may not be compatible with our website. A list of the most popular web browsers can be found below.]]></paragraph1>
+                <paragraph2><![CDATA[Just click on the icons to get to the download page:]]></paragraph2>
+                <close_message><![CDATA[By closing this window you acknowledge that your experience on this website may be degraded.]]></close_message>
+                <close_link><![CDATA[Close This Window]]></close_link>
+                <close_url><![CDATA[#]]></close_url>
+            </custom>
+        </ash_jreject>
+    </default>
+</config>

@@ -1,0 +1,8 @@
+# Ash_Jreject Mappings
+
+Ash_Jreject.xml         app/etc/modules/Ash_Jreject.xml
+code                    app/code/community/Ash/Jreject
+locale/*                app/locale/en_US/
+frontend/layout/*       app/design/frontend/base/default/layout/
+frontend/template/*     app/design/frontend/base/default/template/
+skin/frontend/*         skin/frontend/base/default/
