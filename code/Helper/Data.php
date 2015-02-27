@@ -270,10 +270,17 @@ class Ash_Jreject_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getImagePath()
     {
-        $skinDir = Mage::getBaseDir('skin');
-        $relativeCurrentSkinPath = str_replace($skinDir, '/skin', $this->_getCurrentSkinPath());
+        $skinDir    = Mage::getBaseDir('skin');
+        $imgPath    = 'ash_jreject' . DS . 'images' . DS . 'browsers';
+        $dirExists  = file_exists($this->_getCurrentSkinPath() . DS . $imgPath);
 
-        return $relativeCurrentSkinPath . DS . 'ash_jreject' . DS . 'images' . DS . 'browsers' . DS;
+        if ($dirExists) {
+            $relativeSkinPath = str_replace($skinDir, '/skin', $this->_getCurrentSkinPath());
+        } else {
+            $relativeSkinPath = '/skin/frontend/base/default/';
+        }
+
+        return $relativeSkinPath . DS . $imgPath . DS;
     }
 
     /**
