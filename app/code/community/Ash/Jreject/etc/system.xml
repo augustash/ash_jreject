@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Use the jQuery Browser Rejection library (jReject) to notify customers
+ * using old browsers to upgrade
+ *
+ * @category    Ash
+ * @package     Ash_Jreject
+ * @copyright   Copyright (c) 2015 August Ash, Inc. (http://www.augustash.com)
+ * @license     LICENSE.txt (MIT)
+ */
+-->
+<config>
+    <sections>
+        <ash_jreject translate="label" module="ash_jreject">
+            <label>jQuery Browser Reject</label>
+            <tab>ash</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>13</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label" module="ash_jreject">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <enabled translate="label,comment" module="ash_jreject">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <comment><![CDATA[This must be enabled to add jReject functionality to the frontend.]]></comment>
+                        </enabled>
+                    </fields>
+                </general>
+                <config translate="label" module="ash_jreject">
+                    <label>jReject Configuration Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>0</expanded>
+                    <fields>
+                        <close translate="label,comment" module="ash_jreject">
+                            <label>Allow closing of modal window?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </close>
+                        <close_esc translate="label,comment" module="ash_jreject">
+                            <label>Allow closing of modal window with the ESC key?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </close_esc>
+                        <close_cookie>
+                            <label>Remember if the window was closed by setting a cookie?</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </close_cookie>
+                        <overlay_bg_color translate="label,comment" module="ash_jreject">
+                            <label>Overlay Background Color</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <comment><![CDATA[Enter a hex color value (e.g., <strong><code>#000</code></strong>).]]></comment>
+                        </overlay_bg_color>
+                        <overlay_opacity translate="label,comment" module="ash_jreject">
+                            <label>Overlay Opacity</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <comment><![CDATA[Enter a decimal value from 0-1.]]></comment>
+                        </overlay_opacity>
+                        <fade_in_time translate="label" module="ash_jreject">
+                            <label>Modal Fade-In Speed</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ash_jreject/system_config_source_animation_speed</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <comment><![CDATA[Animation speed in milliseconds. Fast = 300ms; Slow = 700ms]]></comment>
+                        </fade_in_time>
+                        <fade_out_time translate="label" module="ash_jreject">
+                            <label>Modal Fade-Out Speed</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ash_jreject/system_config_source_animation_speed</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <comment><![CDATA[Animation speed in milliseconds. Fast = 300ms; Slow = 700ms]]></comment>
+                        </fade_out_time>
+                    </fields>
+                </config>
+                <browsers translate="label" module="ash_jreject">
+                    <label>Browser Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>0</expanded>
+                    <fields>
+                        <msie translate="label,comment" module="ash_jreject">
+                            <label>Internet Explorer</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>ash_jreject/system_config_source_browser_version_msie</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </msie>
+                        <firefox translate="label,comment" module="ash_jreject">
+                            <label>Mozilla Firefox</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>ash_jreject/system_config_source_browser_version_firefox</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </firefox>
+                        <chrome translate="label,comment" module="ash_jreject">
+                            <label>Google Chrome</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>ash_jreject/system_config_source_browser_version_chrome</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </chrome>
+                        <safari translate="label,comment" module="ash_jreject">
+                            <label>Apple Safari</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>ash_jreject/system_config_source_browser_version_safari</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </safari>
+                        <opera translate="label,comment" module="ash_jreject">
+                            <label>Apple Safari</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>ash_jreject/system_config_source_browser_version_opera</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </opera>
+                    </fields>
+                </browsers>
+                <browser_alternatives translate="label" module="ash_jreject">
+                    <label>Browser Alternatives</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>40</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>0</expanded>
+                    <fields>
+                        <display translate="label,comment" module="ash_jreject">
+                            <label>Internet Explorer</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>ash_jreject/system_config_source_browser_alternative</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </display>
+                    </fields>
+                </browser_alternatives>
+                <custom translate="label" module="ash_jreject">
+                    <label>Customize Messages</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>60</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <header translate="label,comment" module="ash_jreject">
+                            <label>Modal Header Message</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </header>
+                        <paragraph1 translate="label,comment" module="ash_jreject">
+                            <label>Modal Paragraph 1</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </paragraph1>
+                        <paragraph2 translate="label,comment" module="ash_jreject">
+                            <label>Modal Paragraph 2</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </paragraph2>
+                        <close_message translate="label,comment" module="ash_jreject">
+                            <label>Modal Close Message</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </close_message>
+                        <close_link translate="label,comment" module="ash_jreject">
+                            <label>Modal Close Link Text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </close_link>
+                        <close_url translate="label,comment" module="ash_jreject">
+                            <label>Modal Close URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                        </close_url>
+                    </fields>
+                </custom>
+            </groups>
+        </ash_jreject>
+    </sections>
+</config>
