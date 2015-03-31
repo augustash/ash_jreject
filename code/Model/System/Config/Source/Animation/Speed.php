@@ -6,7 +6,7 @@
  * @category    Ash
  * @package     Ash_Jreject
  * @copyright   Copyright (c) 2015 August Ash, Inc. (http://www.augustash.com)
- * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @license     LICENSE.txt (MIT)
  */
 class Ash_Jreject_Model_System_Config_Source_Animation_Speed
 {
