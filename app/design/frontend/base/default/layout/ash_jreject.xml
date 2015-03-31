@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Use the jQuery Browser Rejection library (jReject) to notify customers
+ * using old browsers to upgrade
+ *
+ * @category    Ash
+ * @package     Ash_Jreject
+ * @copyright   Copyright (c) 2015 August Ash, Inc. (http://www.augustash.com)
+ * @license     LICENSE.txt (MIT)
+ */
+-->
+<layout>
+<!--
+Default layout, loads most of the pages
+-->
+    <default>
+        <reference name="head">
+            <action method="addItem" ifconfig="ash_jreject/general/enabled">
+                <type>skin_js</type>
+                <name>ash_jreject/js/jquery.reject.js</name>
+            </action>
+            <action method="addItem" ifconfig="ash_jreject/general/enabled">
+                <type>skin_css</type>
+                <name>ash_jreject/css/jquery.reject.css</name>
+            </action>
+        </reference>
+
+        <reference name="before_head_end">
+            <block type="core/template" name="ash_reject" template="ash_jreject/page/html/jreject.phtml"/>
+        </reference>
+    </default>
+</layout>

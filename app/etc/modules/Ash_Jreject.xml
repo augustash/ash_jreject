@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Use the jQuery Browser Rejection library (jReject) to notify customers
+ * using old browsers to upgrade
+ *
+ * @category    Ash
+ * @package     Ash_Jreject
+ * @copyright   Copyright (c) 2015 August Ash, Inc. (http://www.augustash.com)
+ * @license     LICENSE.txt (MIT)
+ */
+-->
+<config>
+    <modules>
+        <Ash_Jreject>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Ash_Core/>
+                <Ash_Jquery/>
+            </depends>
+        </Ash_Jreject>
+    </modules>
+</config>

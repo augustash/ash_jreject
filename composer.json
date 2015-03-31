@@ -1,0 +1,18 @@
+{
+    "name": "augustash/ash_jreject",
+    "description": "Enable jQuery Browser Rejection library",
+    "homepage": "https://github.com/augustash/ash_jreject.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Josh Johnson",
+            "email": "jjohnson@augustash.com"
+        }
+    ],
+    "type": "magento-module",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*",
+        "augustash/ash_core": "*",
+        "augustash/ash_jquery": "*"
+    }
+}
