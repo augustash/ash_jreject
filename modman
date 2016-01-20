@@ -3,4 +3,4 @@ app/code/community/Ash/Jreject/                         app/code/community/Ash/J
 app/locale/en_US/*                                      app/locale/en_US/
 app/design/frontend/base/default/layout/*               app/design/frontend/base/default/layout/
 app/design/frontend/base/default/template/ash_jreject/  app/design/frontend/base/default/template/ash_jreject/
-skin/frontend/base/default/ash_reject/                  skin/frontend/base/default/ash_reject/
+skin/frontend/base/default/ash_jreject/                 skin/frontend/base/default/ash_jreject/
